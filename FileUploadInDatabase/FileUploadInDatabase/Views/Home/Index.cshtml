@@ -2,24 +2,37 @@
 
 @{
     ViewBag.Title = "Home Page";
-    Layout = null;
+    //Layout = null;
 }
 
+<div style="margin-left:10%; margin-right:10%; margin-top:10%; margin-bottom:10%;">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+        <h1 style="color:blue; margin-left:18%">Student Form</h1><br>
+        <div class="row">
+            <div class="col-md-3" ><p class="float-right">Name : </p> </div>
+            <div class="col-md-3">@Html.TextBoxFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })</div>
+        </div>
 
-    <h4 style="color:blue;">Student Form</h4><br>
-    <p>Name : </p> @Html.TextBoxFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })<br>
-    <p>E-mail : </p> @Html.TextBoxFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })<br>
-    <p>Resume : </p> <input type = "file" name = "postedFile" /> <br><br>
-    <input type="submit" name="Submit" value="Submit" />
+        <div class="row">
+            <div class="col-md-3" ><p class="float-right">E-mail : </p></div>
+            <div class="col-md-3">@Html.TextBoxFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })</div>
+        </div>
 
-}
+        <div class="row">
+            <div class="col-md-3"><p class="float-right">Resume : </p></div>
+            <div class="col-md-3"><input type="file" name="postedFile" /> <br><br></div>
+        </div>
+      
+        <div class="row">           
+            <div class="col-md-3" style="margin-left:20%;"><input type="submit" name="Submit" value="Submit" class="btn btn-success shadow float-left" /><a href="@Url.Action("ShowStudentData","Home")" class="btn btn-primary float-right">Show All Students</a></div>
+        </div>
+    }
 
-<h1 style="color:green;">@ViewBag.Message</h1>
-<h1 style="color:red;">@ViewBag.errMessage</h1>
-
+    <h1 style="color:green;">@ViewBag.Message</h1>
+    <h1 style="color:red;">@ViewBag.errMessage</h1>
+</div>
 
 

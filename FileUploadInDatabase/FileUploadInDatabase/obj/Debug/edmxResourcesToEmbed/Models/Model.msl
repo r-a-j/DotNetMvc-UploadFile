@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="StudentModelStoreContainer" CdmEntityContainer="FileUploadDemoEntities">
+  <EntityContainerMapping StorageEntityContainer="FileUploadDemoModelStoreContainer" CdmEntityContainer="FileUploadDemoEntities">
     <EntitySetMapping Name="Students">
-      <EntityTypeMapping TypeName="StudentModel.Student">
+      <EntityTypeMapping TypeName="FileUploadDemoModel.Student">
         <MappingFragment StoreEntitySet="Student">
-          <ScalarProperty Name="resume" ColumnName="resume" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="resume" ColumnName="resume" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
