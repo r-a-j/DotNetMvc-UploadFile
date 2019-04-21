@@ -36,7 +36,7 @@
                         <td>@x.email</td>
 
 
-                        <td><a href="@Url.Action("ShowFile", "Home", new { @Id = x.Id})">Download</a></td>
+                        <td>@if(! (@x.resume==null)){<a href="@Url.Action("ShowFile", "Home", new { @Id = x.Id})">Download</a> }</td>
                     </tr>
                 }
             }

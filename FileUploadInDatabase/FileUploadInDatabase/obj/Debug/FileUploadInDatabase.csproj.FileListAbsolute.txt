@@ -157,3 +157,4 @@ C:\Users\raj24\OneDrive\Documents\GitHub\DotNetMvc-UploadFile\FileUploadInDataba
 C:\Users\raj24\OneDrive\Documents\GitHub\DotNetMvc-UploadFile\FileUploadInDatabase\FileUploadInDatabase\obj\Debug\FileUploadInDatabase.csproj.CopyComplete
 C:\Users\raj24\OneDrive\Documents\GitHub\DotNetMvc-UploadFile\FileUploadInDatabase\FileUploadInDatabase\obj\Debug\FileUploadInDatabase.dll
 C:\Users\raj24\OneDrive\Documents\GitHub\DotNetMvc-UploadFile\FileUploadInDatabase\FileUploadInDatabase\obj\Debug\FileUploadInDatabase.pdb
+C:\Users\raj24\OneDrive\Documents\GitHub\DotNetMvc-UploadFile\FileUploadInDatabase\FileUploadInDatabase\obj\Debug\FileUploadInDatabase.csprojAssemblyReference.cache

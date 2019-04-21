@@ -39,9 +39,9 @@ namespace FileUploadInDatabase.Controllers
                 {
                     Student model = new Student
                     {
-                        name = form["name"].ToString(),
-                        email = form["email"].ToString(),
-                        resume = form["resume"].ToString()
+                        name = form["name"],
+                        email = form["email"],
+                        resume = form["resume"]
                     };
                     db.Students.Add(model);
                     db.SaveChanges();
@@ -58,7 +58,8 @@ namespace FileUploadInDatabase.Controllers
             FileUploadDemoEntities db = new FileUploadDemoEntities();
             Student cd = db.Students.FirstOrDefault(c => c.Id == Id);
             string pth = cd.resume.ToString();
-            return File(pth, System.Net.Mime.MediaTypeNames.Application.Octet);
+            string filename = Path.GetFileName(pth);
+            return File(pth, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
         }
 
         public ActionResult ShowStudentData()
